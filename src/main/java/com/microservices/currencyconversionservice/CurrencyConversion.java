@@ -4,22 +4,22 @@ import java.math.BigDecimal;
 
 public class CurrencyConversion {
 	private Long id;
-	private String form;
+	private String from;
 	private String to;
-	private BigDecimal conversionMultiple;
 	private BigDecimal quantity;
+	private BigDecimal conversionMultiple;
 	private BigDecimal totalCalculatedAmount;
 	private String environment;
-	
+
 	public CurrencyConversion() {
 		super();
 	}
 
-	public CurrencyConversion(Long id, String form, String to, BigDecimal conversionMultiple, BigDecimal quantity,
+	public CurrencyConversion(Long id, String from, String to, BigDecimal quantity, BigDecimal conversionMultiple,
 			BigDecimal totalCalculatedAmount, String environment) {
 		super();
 		this.id = id;
-		this.form = form;
+		this.from = from;
 		this.to = to;
 		this.conversionMultiple = conversionMultiple;
 		this.quantity = quantity;
@@ -35,12 +35,12 @@ public class CurrencyConversion {
 		this.id = id;
 	}
 
-	public String getForm() {
-		return form;
+	public String getFrom() {
+		return from;
 	}
 
-	public void setForm(String form) {
-		this.form = form;
+	public void setFrom(String from) {
+		this.from = from;
 	}
 
 	public String getTo() {
@@ -86,8 +86,8 @@ public class CurrencyConversion {
 	@Override
 	public String toString() {
 		return String.format(
-				"CurrencyConversion [id=%s, form=%s, to=%s, conversionMultiple=%s, quantity=%s, totalCalculatedAmount=%s, environment=%s]",
-				id, form, to, conversionMultiple, quantity, totalCalculatedAmount, environment);
+				"CurrencyConversion [id=%s, from=%s, to=%s, conversionMultiple=%s, quantity=%s, totalCalculatedAmount=%s, environment=%s]",
+				id, from, to, conversionMultiple, quantity, totalCalculatedAmount, environment);
 	}
-	
+
 }
